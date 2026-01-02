@@ -7,7 +7,7 @@ public class Main {
 
         myMovie1.displaysTechnicalSheet();
 
-        myMovie1.rate(7);
+        myMovie1.rate(4);
         myMovie1.rate(5);
         myMovie1.rate(4);
         System.out.println(myMovie1.sum_Of_Assessments);
