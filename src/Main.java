@@ -1,4 +1,5 @@
 import br.com.alura.screenmatch.modelos.Movie;
+import br.com.alura.screenmatch.modelos.Series;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,6 +8,8 @@ public class Main {
         myMovie1.setName("Forrest Gump");
         myMovie1.setYearOfRelease(1994);
         myMovie1.setDurationInMinutes(142);
+        myMovie1.setDurationInMinutes(150);
+        System.out.println("Duração: " + myMovie1.getDurationInMinutes());
 
        // Chamando métodos da classe Filme
         myMovie1.displaysTechnicalSheet();
@@ -19,5 +22,13 @@ public class Main {
         //Exibindo a média das avaliações
         System.out.println("Total of Reviews: " + myMovie1.getTotalReviews());
         //System.out.println(myMovie1.averageRating());
+
+        Series lost = new Series();
+        lost.setName("Lost");
+        lost.setYearOfRelease(2000);
+        lost.displaysTechnicalSheet();
+        lost.setSeasons(10);
+        lost.getEpisodesPerSeason(10);
+       // System.out.println("Duração da série: " + lost.getDurationInMinutes());
     }
 }
