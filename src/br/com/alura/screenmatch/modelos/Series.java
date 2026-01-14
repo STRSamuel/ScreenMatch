@@ -41,4 +41,8 @@ public class Series extends Title {
     public void getEpisodesPerSeason(int i) {
     }
 
+    @Override
+    public int getDurationInMinutes() {
+        return seasons * episodesPerSeason * minutesPerEpisode;
+    }
 }

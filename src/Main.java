@@ -7,9 +7,8 @@ public class Main {
         Movie myMovie1 = new Movie();
         myMovie1.setName("Forrest Gump");
         myMovie1.setYearOfRelease(1994);
-        myMovie1.setDurationInMinutes(142);
-        myMovie1.setDurationInMinutes(150);
-        System.out.println("Duração: " + myMovie1.getDurationInMinutes());
+        myMovie1.setDurationInMinutes(143);
+        System.out.println("Film duration: " + myMovie1.getDurationInMinutes());
 
        // Chamando métodos da classe Filme
         myMovie1.displaysTechnicalSheet();
@@ -28,7 +27,8 @@ public class Main {
         lost.setYearOfRelease(2000);
         lost.displaysTechnicalSheet();
         lost.setSeasons(10);
-        lost.getEpisodesPerSeason(10);
-       // System.out.println("Duração da série: " + lost.getDurationInMinutes());
+        lost.setEpisodesPerSeason(10);
+        lost.setMinutesPerEpisode(50);
+        System.out.println("Series duration: " + lost.getDurationInMinutes());
     }
 }
