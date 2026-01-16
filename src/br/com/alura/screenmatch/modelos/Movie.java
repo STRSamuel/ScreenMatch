@@ -2,7 +2,7 @@ package br.com.alura.screenmatch.modelos;
 
 import br.com.alura.screenmatch.calculation.Sortable;
 
-public class Movie extends Title {
+public class Movie extends Title implements Sortable{
     private String director;
 
     public String getDirector() {
