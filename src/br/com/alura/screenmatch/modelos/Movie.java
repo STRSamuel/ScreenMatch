@@ -1,5 +1,7 @@
 package br.com.alura.screenmatch.modelos;
 
+import br.com.alura.screenmatch.calculation.Sortable;
+
 public class Movie extends Title {
     private String director;
 
