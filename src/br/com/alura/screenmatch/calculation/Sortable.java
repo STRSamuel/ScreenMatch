@@ -1,5 +1,5 @@
 package br.com.alura.screenmatch.calculation;
 
 public interface Sortable {
-    int getClassication();
+    int getClassification();
 }

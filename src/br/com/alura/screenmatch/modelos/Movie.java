@@ -13,4 +13,10 @@ public class Movie extends Title implements Sortable{
 
         this.director = director;
     }
-}
+
+    @Override
+    public int getClassification(){
+        //CASTING
+        return (int) averageRating() / 2;
+    }
+    }
