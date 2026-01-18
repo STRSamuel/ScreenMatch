@@ -17,9 +17,9 @@ public class Main {
         myMovie1.displaysTechnicalSheet();
 
         // Avaliações
-        myMovie1.rate(4);
-        myMovie1.rate(5);
-        myMovie1.rate(4);
+        myMovie1.rate(10);
+        myMovie1.rate(6);
+        myMovie1.rate(3);
 
         //Exibindo a média das avaliações
         System.out.println("Total of Reviews: " + myMovie1.getTotalReviews());
