@@ -4,6 +4,9 @@ import br.com.alura.screenmatch.modelos.Episode;
 import br.com.alura.screenmatch.modelos.Movie;
 import br.com.alura.screenmatch.modelos.Series;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
         // Preenchendo os atributos
@@ -23,7 +26,7 @@ public class Main {
 
         //Exibindo a média das avaliações
         System.out.println("Total of Reviews: " + myMovie1.getTotalReviews());
-        //System.out.println(myMovie1.averageRating());
+        System.out.println(myMovie1.averageRating());
 
         Series lost = new Series();
         lost.setName("Lost");
@@ -54,5 +57,19 @@ public class Main {
         episode.setSerie(lost);
         episode.setTotalOfViews(500);
         filter.filter(episode);
+
+        var filmeDoSamuel = new Movie();
+        filmeDoSamuel.setName("Dogville");
+        filmeDoSamuel.setDurationInMinutes(200);
+        filmeDoSamuel.setYearOfRelease(2003);
+        filmeDoSamuel.rate(10);
+
+        ArrayList<Movie> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filmeDoSamuel);
+        listaDeFilmes.add(myMovie1);
+        listaDeFilmes.add(myMovie2);
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
+        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getName());
+        //System.out.println(listaDeFilmes);
     }
 }

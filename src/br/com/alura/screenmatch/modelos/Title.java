@@ -8,6 +8,10 @@ public class Title {
     private int totalReviews;
     private int durationInMinutes;
 
+    public String getName() {
+        return name;
+    }
+
     public int getTotalReviews(){
         return totalReviews;
     }
