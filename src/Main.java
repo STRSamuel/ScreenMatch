@@ -64,12 +64,12 @@ public class Main {
         filmeDoSamuel.setYearOfRelease(2003);
         filmeDoSamuel.rate(10);
 
+        // NOVO ARRAY LIST
         ArrayList<Movie> listaDeFilmes = new ArrayList<>();
         listaDeFilmes.add(filmeDoSamuel);
         listaDeFilmes.add(myMovie1);
         listaDeFilmes.add(myMovie2);
         System.out.println("Tamanho da lista: " + listaDeFilmes.size());
         System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getName());
-        //System.out.println(listaDeFilmes);
     }
 }
