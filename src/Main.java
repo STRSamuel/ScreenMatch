@@ -58,6 +58,7 @@ public class Main {
         episode.setTotalOfViews(500);
         filter.filter(episode);
 
+        // VAR
         var filmeDoSamuel = new Movie();
         filmeDoSamuel.setName("Dogville");
         filmeDoSamuel.setDurationInMinutes(200);
