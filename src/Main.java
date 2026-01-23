@@ -60,7 +60,7 @@ public class Main {
 
         // VAR
         var filmeDoSamuel = new Movie();
-        filmeDoSamuel.setName("Dogville");
+        filmeDoSamuel.setName("A empregada");
         filmeDoSamuel.setDurationInMinutes(200);
         filmeDoSamuel.setYearOfRelease(2003);
         filmeDoSamuel.rate(10);
