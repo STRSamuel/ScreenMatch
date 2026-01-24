@@ -61,9 +61,9 @@ public class Main {
         // VAR
         var filmeDoSamuel = new Movie();
         filmeDoSamuel.setName("A empregada");
-        filmeDoSamuel.setDurationInMinutes(200);
-        filmeDoSamuel.setYearOfRelease(2003);
-        filmeDoSamuel.rate(10);
+        filmeDoSamuel.setDurationInMinutes(350);
+        filmeDoSamuel.setYearOfRelease(2026);
+        filmeDoSamuel.rate(4);
 
         // NOVO ARRAY LIST
         ArrayList<Movie> listaDeFilmes = new ArrayList<>();
