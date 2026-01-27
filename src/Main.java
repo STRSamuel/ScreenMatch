@@ -63,7 +63,7 @@ public class Main {
         filmeDoSamuel.setName("A empregada");
         filmeDoSamuel.setDurationInMinutes(350);
         filmeDoSamuel.setYearOfRelease(2026);
-        filmeDoSamuel.rate(4);
+        filmeDoSamuel.rate(9);
 
         // NOVO ARRAY LIST
         ArrayList<Movie> listaDeFilmes = new ArrayList<>();
@@ -72,5 +72,6 @@ public class Main {
         listaDeFilmes.add(myMovie2);
         System.out.println("Tamanho da lista: " + listaDeFilmes.size());
         System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getName());
+        System.out.println("Plot Twist!");
     }
 }
