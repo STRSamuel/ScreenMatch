@@ -20,6 +20,10 @@ public class Title {
         this.name = name;
     }
 
+    public int getYearOfRelease() {
+        return yearOfRelease;
+    }
+
     public void setYearOfRelease(int yearOfRelease) {
         this.yearOfRelease = yearOfRelease;
     }

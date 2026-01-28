@@ -71,7 +71,9 @@ public class Main {
         listaDeFilmes.add(myMovie1);
         listaDeFilmes.add(myMovie2);
         System.out.println("Tamanho da lista: " + listaDeFilmes.size());
-        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getName());
-        System.out.println("Plot Twist!");
+        System.out.println("Filmes: " + listaDeFilmes.get(0).getName());
+        System.out.println("toString do filme: " + listaDeFilmes.get(0).toString());
+        System.out.println(listaDeFilmes);
+
     }
 }
