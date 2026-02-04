@@ -26,7 +26,7 @@ public class PrincipalComListas {
         for (Title item : lista) {
             System.out.println(item.getName());
             Movie movie = (Movie) item;
-            System.out.println("Classificacao " + movie.averageRating());
+            System.out.println("Classificacao: " + movie.averageRating());
         }
     }
 }
