@@ -28,7 +28,7 @@ public class PrincipalComListas {
         // "iter", é o atalho para o for each.
         for (Title item : lista) {
             System.out.println(item.getName());
-            if (item instanceof Movie movie) {
+            if (item instanceof Movie movie && movie.getClassification() > 2) {
                 System.out.println("Classificacao: " + movie.averageRating());
             }
         }
