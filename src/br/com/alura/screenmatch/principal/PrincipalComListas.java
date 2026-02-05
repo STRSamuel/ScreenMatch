@@ -9,11 +9,14 @@ import java.util.ArrayList;
 public class PrincipalComListas {
     public static void main(String[] args) {
         Movie myMovie1 = new Movie("Forrest Gump", 1994);
-        myMovie1.averageRating();
+        myMovie1.rate(3);
+
         Movie myMovie2 = new Movie("Titanic", 1994);
-        myMovie2.averageRating();
+        myMovie2.rate(5);
+
         var filmeDoSamuel = new Movie("A empregada", 2026);
-        filmeDoSamuel.averageRating();
+        filmeDoSamuel.rate(3);
+
         Series lost = new Series("Lost" , 2000);
 
         ArrayList<Title> lista = new ArrayList<>();
@@ -25,8 +28,9 @@ public class PrincipalComListas {
         // "iter", é o atalho para o for each.
         for (Title item : lista) {
             System.out.println(item.getName());
-            Movie movie = (Movie) item;
-            System.out.println("Classificacao: " + movie.averageRating());
+            if (item instanceof Movie movie) {
+                System.out.println("Classificacao: " + movie.averageRating());
+            }
         }
     }
 }

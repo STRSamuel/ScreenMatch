@@ -62,4 +62,5 @@ public class Title {
     public double averageRating(){
         return sum_Of_Assessments / totalReviews;
     }
+
 }

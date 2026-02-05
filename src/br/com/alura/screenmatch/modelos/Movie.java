@@ -20,9 +20,7 @@ public class Movie extends Title implements Sortable{
     }
 
     @Override
-    public int getClassification(){
-        //CASTING
-        return (int) averageRating() / 2;
+    public int getClassification(){ return (int) averageRating() / 2;
     }
 
     @Override
