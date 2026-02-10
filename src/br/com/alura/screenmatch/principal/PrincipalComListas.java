@@ -5,16 +5,17 @@ import br.com.alura.screenmatch.modelos.Series;
 import br.com.alura.screenmatch.modelos.Title;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
-        Movie myMovie1 = new Movie("Forrest Gump", 1994);
+        Movie myMovie1 = new Movie("Forrest Gump:", 1994);
         myMovie1.rate(6);
 
-        Movie myMovie2 = new Movie("Titanic", 1994);
+        Movie myMovie2 = new Movie("Titanic:", 1994);
         myMovie2.rate(10);
 
-        var filmeDoSamuel = new Movie("A empregada", 2026);
+        var filmeDoSamuel = new Movie("A empregada:", 2026);
         filmeDoSamuel.rate(8);
 
         Series lost = new Series("Lost" , 2000);
@@ -32,5 +33,14 @@ public class PrincipalComListas {
                 System.out.println("Classificacao: " + movie.averageRating());
             }
         }
+
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        buscaPorArtista.add("Adam Sandler");
+        buscaPorArtista.add("Paulo");
+        buscaPorArtista.add("Jaqueline");
+        Collections.sort(buscaPorArtista);
+        System.out.println("ORDENAÇÃO COM COLLECTIONS: " + buscaPorArtista);
+        System.out.println("Lista com ordem alfabetica: " + lista);
+
     }
 }
