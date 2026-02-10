@@ -9,13 +9,13 @@ import java.util.ArrayList;
 public class PrincipalComListas {
     public static void main(String[] args) {
         Movie myMovie1 = new Movie("Forrest Gump", 1994);
-        myMovie1.rate(3);
+        myMovie1.rate(6);
 
         Movie myMovie2 = new Movie("Titanic", 1994);
-        myMovie2.rate(5);
+        myMovie2.rate(10);
 
         var filmeDoSamuel = new Movie("A empregada", 2026);
-        filmeDoSamuel.rate(3);
+        filmeDoSamuel.rate(8);
 
         Series lost = new Series("Lost" , 2000);
 
