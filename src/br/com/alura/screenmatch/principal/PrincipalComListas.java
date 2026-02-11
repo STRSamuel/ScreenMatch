@@ -7,6 +7,7 @@ import br.com.alura.screenmatch.modelos.Title;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.LinkedList;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -21,7 +22,7 @@ public class PrincipalComListas {
 
         Series lost = new Series("Lost" , 2000);
 
-        ArrayList<Title> lista = new ArrayList<>();
+        ArrayList<Title> lista = new LinkedList<>();
         lista.add(filmeDoSamuel);
         lista.add(myMovie1);
         lista.add(myMovie2);
