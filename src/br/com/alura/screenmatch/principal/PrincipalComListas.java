@@ -22,7 +22,7 @@ public class PrincipalComListas {
 
         Series lost = new Series("Lost" , 2000);
 
-        ArrayList<Title> lista = new LinkedList<>();
+        ArrayList<Title> lista = new ArrayList<>();
         lista.add(filmeDoSamuel);
         lista.add(myMovie1);
         lista.add(myMovie2);
