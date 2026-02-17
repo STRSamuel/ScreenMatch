@@ -11,52 +11,64 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class PrincipalComBusca {
     public static void main(String[] args) throws IOException, InterruptedException {
         // SCANNER
         Scanner leitura = new Scanner(System.in);
-        System.out.println("Digite seu filme: ");
-        var busca = leitura.nextLine();
+        String busca = " ";
+        List<Title> titulos = new ArrayList<>();
+        Gson gson = new GsonBuilder()
+                .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+                .setPrettyPrinting()
+                .create();
 
-        // CONCATENANDO O "BUSCA" COM A URL
-        String endereco = "http://www.omdbapi.com/?t=" + busca.replace(" ", "+") + "&apikey=a3cac225";
-        try {
-            HttpClient client = HttpClient.newHttpClient();
-            HttpRequest request = HttpRequest.newBuilder()
-                    .uri(URI.create(endereco))
-                    .build();
-            HttpResponse<String> response = client
-                    .send(request, HttpResponse.BodyHandlers.ofString());
+        while (!busca.equalsIgnoreCase("sair")) {
 
-            String json = response.body();
-            System.out.println(json);
+            System.out.println("Digite seu filme: ");
+            busca = leitura.nextLine();
 
-            Gson gson = new GsonBuilder().setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
-                    .create();
-            //Title meuTitulo = gson.fromJson(json, Title.class);
-            TituloOMDB meuTituloOmdb = gson.fromJson(json, TituloOMDB.class);
-            System.out.println(meuTituloOmdb);
+            if (busca.equalsIgnoreCase("sair")) {
+                break;
+            }
 
+            // CONCATENANDO O "BUSCA" COM A URL
+            String endereco = "http://www.omdbapi.com/?t=" + busca.replace(" ", "+") + "&apikey=a3cac225";
+            try {
+                HttpClient client = HttpClient.newHttpClient();
+                HttpRequest request = HttpRequest.newBuilder()
+                        .uri(URI.create(endereco))
+                        .build();
+                HttpResponse<String> response = client
+                        .send(request, HttpResponse.BodyHandlers.ofString());
 
-            Title meuTitulo = new Title(meuTituloOmdb);
-            System.out.println("TITULO CONVERTIDO: ");
-            System.out.println(meuTitulo);
+                String json = response.body();
+                System.out.println(json);
 
-            FileWriter escrita = new FileWriter("filmes.txt");
-            escrita.write(meuTitulo.toString());
-            escrita.close();
+                TituloOMDB meuTituloOmdb = gson.fromJson(json, TituloOMDB.class);
+                System.out.println(meuTituloOmdb);
 
+                Title meuTitulo = new Title(meuTituloOmdb);
+                System.out.println("TITULO CONVERTIDO: ");
+                System.out.println(meuTitulo);
 
-        // "|" PARA AGRUPAR DUAS EXCEÇÕES
-        } catch (NullPointerException | IllegalArgumentException e ) {
-            System.out.println("Houve um erro na busca, verifique o endereço: ");
-            System.out.println(e.getMessage());
-        } catch (ErroDeConversaoDeAnoException e) {
-            System.out.println(e.getMessage());
+                titulos.add(meuTitulo);
+
+                // "|" PARA AGRUPAR DUAS EXCEÇÕES
+            } catch (NullPointerException | IllegalArgumentException e) {
+                System.out.println("Houve um erro na busca, verifique o endereço: ");
+                System.out.println(e.getMessage());
+            } catch (ErroDeConversaoDeAnoException e) {
+                System.out.println(e.getMessage());
+            }
         }
-
+        System.out.println(titulos);
+        FileWriter escrita = new FileWriter("filmes.json");
+        escrita.write(gson.toJson(titulos));
+        escrita.close();
         System.out.println("finalizou");
     }
 }

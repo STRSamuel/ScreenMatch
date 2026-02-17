@@ -1,0 +1,18 @@
+[
+  {
+    "Name": "Dogville",
+    "Year": 2003,
+    "WithinThePlan": false,
+    "Sum_Of_Assessments": 0.0,
+    "TotalReviews": 0,
+    "DurationInMinutes": 17
+  },
+  {
+    "Name": "Matrix",
+    "Year": 1993,
+    "WithinThePlan": false,
+    "Sum_Of_Assessments": 0.0,
+    "TotalReviews": 0,
+    "DurationInMinutes": 60
+  }
+]
